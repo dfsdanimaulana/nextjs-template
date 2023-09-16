@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Run ESLint to check for linting errors
+npm run lint
+
+# Check the exit status of the linting command
+if [ $? -ne 0 ]; then
+  # If linting failed, display an error message and prevent the commit
+  echo "Linting failed. Please fix the linting errors before committing."
+  exit 1
+fi
+
+# Run Prettier check to verify code formatting
+npm run prettier:check
+
+# Check the exit status of the Prettier check command
+if [ $? -ne 0 ]; then
+  # If Prettier check fails, display an error message and prevent the commit
+  echo "Prettier check failed. Please format your code before committing, 'npm run prettier'."
+  exit 1
+fi
+
+# Allow the commit to proceed if both linting and Prettier checks passed
+exit 0

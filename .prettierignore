@@ -1,0 +1,11 @@
+# Ignore build and output directories
+node_modules
+.next
+out
+build
+coverage
+.husky
+
+# Ignore specific files
+package-lock.json
+yarn.lock
