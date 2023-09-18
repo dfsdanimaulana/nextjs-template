@@ -6,8 +6,9 @@ const buildEslintCommand = (filenames) =>
         .join(' --file ')}`
 
 module.exports = {
-    [`*.{js,jsx,ts,tsx,json,css,scss,html}','!**/.lintstagedrc.js`]: [
+    '*.{js,jsx,ts,tsx,json,css,scss,html}': [
         'npm run prettier:check',
         buildEslintCommand,
     ],
+    '!**/.lintstagedrc.js': ['npm run prettier:check', buildEslintCommand],
 }
