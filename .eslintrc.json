@@ -1,4 +1,36 @@
 {
     "root": true,
-    "extends": ["next/core-web-vitals", "prettier"]
+    "extends": [
+        "next/core-web-vitals",
+        "airbnb",
+        "plugin:import/recommended",
+        "prettier"
+    ],
+    "plugins": ["import", "prettier"],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "import/prefer-default-export": "off",
+        "react/prop-types": "off",
+        "react/jsx-props-no-spreading": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
+        "no-undef": "off",
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "always",
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    ["parent", "sibling", "index"]
+                ],
+                "alphabetize": {
+                    "order": "asc"
+                }
+            }
+        ]
+    }
 }
