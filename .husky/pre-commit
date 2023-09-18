@@ -6,7 +6,7 @@ npm run prettier:check
 # Check the exit status of the Prettier check command
 if [ $? -ne 0 ]; then
   # If Prettier check fails, display an error message and prevent the commit
-  echo "Prettier check failed. Please format your code before committing, 'npm run prettier'."
+  echo "Prettier check failed. Please format your code before committing, 'npm run prettier:write'."
   exit 1
 fi
 
