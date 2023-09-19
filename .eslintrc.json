@@ -2,8 +2,10 @@
     "root": true,
     "extends": [
         "next/core-web-vitals",
-        "airbnb",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended",
         "plugin:import/recommended",
+        "airbnb",
         "prettier"
     ],
     "plugins": ["import", "prettier"],
